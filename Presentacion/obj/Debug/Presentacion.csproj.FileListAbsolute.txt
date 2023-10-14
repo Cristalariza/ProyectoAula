@@ -1,0 +1,17 @@
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\bin\Debug\Presentacion.exe
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\bin\Debug\BLL.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\bin\Debug\Entity.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\bin\Debug\BLL.pdb
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\bin\Debug\Entity.pdb
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.VentanasAuxiliares.FrmLoading.resources
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.VentanasPrincipales.FrmLogin.resources

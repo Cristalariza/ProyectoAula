@@ -1,0 +1,11 @@
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\bin\Debug\BLL.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\bin\Debug\BLL.pdb
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\bin\Debug\DAL.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\bin\Debug\Entity.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\bin\Debug\DAL.pdb
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\bin\Debug\Entity.pdb
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\obj\Debug\BLL.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\obj\Debug\BLL.pdb
