@@ -18,7 +18,7 @@ namespace Presentacion.VentanasAuxiliares
 
         private void Loading()
         {
-            Cargar.Increment(1);
+            Cargar.Increment(2);
             if (Cargar.Value == Cargar.Maximum)
             {
                 this.timer1.Stop();

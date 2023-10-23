@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Presentacion
+namespace Presentacion.VentanasAuxiliares
 {
-    public partial class FrmPrincipal : Form
+    public partial class FormInforme : Form
     {
-        public FrmPrincipal()
+        public FormInforme()
         {
             InitializeComponent();
         }
