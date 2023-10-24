@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelDesktopPanel = new System.Windows.Forms.Panel();
             this.btnConfiguracion = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
             this.btnInforme = new System.Windows.Forms.Button();
             this.btnfacturacion = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.panelDesktopPanel = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -61,61 +61,6 @@
             this.panelMenu.Size = new System.Drawing.Size(250, 529);
             this.panelMenu.TabIndex = 0;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.BackColor = System.Drawing.Color.Black;
-            this.panelLogo.Controls.Add(this.label1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.ForeColor = System.Drawing.Color.Black;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(250, 80);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.DarkGray;
-            this.panelTitleBar.Controls.Add(this.lblTitle);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(250, 0);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(653, 80);
-            this.panelTitleBar.TabIndex = 1;
-            this.panelTitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitleBar_Paint);
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.Black;
-            this.lblTitle.Location = new System.Drawing.Point(196, 24);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(250, 32);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "MENU PRINCIPAL";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(45, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 27);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "  KRISBAN";
-            // 
-            // panelDesktopPanel
-            // 
-            this.panelDesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktopPanel.Location = new System.Drawing.Point(250, 80);
-            this.panelDesktopPanel.Name = "panelDesktopPanel";
-            this.panelDesktopPanel.Size = new System.Drawing.Size(653, 449);
-            this.panelDesktopPanel.TabIndex = 2;
-            this.panelDesktopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPanel_Paint);
             // 
             // btnConfiguracion
             // 
@@ -238,12 +183,67 @@
             this.btnProductos.UseVisualStyleBackColor = false;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.Black;
+            this.panelLogo.Controls.Add(this.label1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.ForeColor = System.Drawing.Color.Black;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(250, 80);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(45, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 27);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "  KRISBAN";
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.DarkGray;
+            this.panelTitleBar.Controls.Add(this.lblTitle);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(250, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(820, 80);
+            this.panelTitleBar.TabIndex = 1;
+            this.panelTitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitleBar_Paint);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.Black;
+            this.lblTitle.Location = new System.Drawing.Point(280, 24);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(250, 32);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "MENU PRINCIPAL";
+            // 
+            // panelDesktopPanel
+            // 
+            this.panelDesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktopPanel.Location = new System.Drawing.Point(250, 80);
+            this.panelDesktopPanel.Name = "panelDesktopPanel";
+            this.panelDesktopPanel.Size = new System.Drawing.Size(820, 449);
+            this.panelDesktopPanel.TabIndex = 2;
+            this.panelDesktopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPanel_Paint);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(903, 529);
+            this.ClientSize = new System.Drawing.Size(1070, 529);
             this.Controls.Add(this.panelDesktopPanel);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);

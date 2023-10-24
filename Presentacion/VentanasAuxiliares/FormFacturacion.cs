@@ -16,5 +16,10 @@ namespace Presentacion.VentanasAuxiliares
         {
             InitializeComponent();
         }
+
+        private void FormFacturacion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

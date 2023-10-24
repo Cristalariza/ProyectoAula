@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Presentacion.VentanasAuxiliares
 {
-    public partial class FormInventario : Form
+    public partial class FrmInventario : Form
     {
-        public FormInventario()
+        public FrmInventario()
         {
             InitializeComponent();
+        }
+
+        private void FrmInventario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

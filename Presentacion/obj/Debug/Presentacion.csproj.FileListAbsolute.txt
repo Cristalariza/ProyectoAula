@@ -18,9 +18,9 @@ C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.
 C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.pdb
-C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.VentanasAuxiliares.FormInventario.resources
 C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.VentanasAuxiliares.FormCliente.resources
 C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.VentanasAuxiliares.FormConfiguracion.resources
 C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.VentanasAuxiliares.FormEmpleados.resources
 C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.VentanasAuxiliares.FormFacturacion.resources
 C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.VentanasAuxiliares.FormInforme.resources
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.VentanasAuxiliares.FrmInventario.resources

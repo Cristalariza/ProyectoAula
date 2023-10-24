@@ -91,7 +91,7 @@ namespace Presentacion.VentanasPrincipales
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
-            OpenClidForm(new VentanasAuxiliares.FormInventario(),sender);
+            OpenClidForm(new VentanasAuxiliares.FrmInventario(),sender);
 
         }
 
