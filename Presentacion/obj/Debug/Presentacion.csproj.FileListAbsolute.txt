@@ -26,3 +26,6 @@ C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.
 C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\obj\Debug\Presentacion.VentanasAuxiliares.FrmInventario.resources
 C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\bin\Debug\DAL.dll
 C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\bin\Debug\DAL.pdb
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\bin\Debug\itextsharp.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\Presentacion\bin\Debug\itextsharp.xml

@@ -108,9 +108,6 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
-                // Aquí deberías registrar el error en un log o algo similar para poder revisarlo después
-                // Cerrar la conexión si está abierta
                 CerrarConexion();
                 return "Ocurrió un error al intentar eliminar el producto: " + ex.Message;
             }
@@ -122,17 +119,12 @@ namespace DAL
 
             try
             {
-                // Se abre la conexión
                 AbrirConexion();
-
-                // Crear la consulta SQL para seleccionar todos los productos
                 string sqlSeleccionar = "SELECT idProducto, nombre, precio, cantidadEnStock FROM Producto";
                 SqlCommand cmdSeleccionar = new SqlCommand(sqlSeleccionar, conexion);
-
-                // Ejecutar la consulta y obtener el resultado en un SqlDataReader
                 using (SqlDataReader reader = cmdSeleccionar.ExecuteReader())
                 {
-                    while (reader.Read()) // Leer el siguiente registro mientras haya datos
+                    while (reader.Read()) 
                     {
                         Producto producto = new Producto
                         {
@@ -144,15 +136,11 @@ namespace DAL
                         listaProductos.Add(producto);
                     }
                 }
-
-                // Se cierra la conexión
                 CerrarConexion();
             }
             catch (Exception ex)
             {
-                // Cerrar la conexión si está abierta
                 CerrarConexion();
-                // Podrías lanzar la excepción o manejarla según sea el caso de uso.
                 throw new Exception("Ocurrió un error al obtener los productos: " + ex.Message);
             }
 
@@ -165,18 +153,13 @@ namespace DAL
 
             try
             {
-                // Se abre la conexión
                 AbrirConexion();
-
-                // Crear la consulta SQL para seleccionar el producto por su ID
                 string sqlSeleccionar = "SELECT idProducto, nombre, precio, cantidadEnStock FROM Producto WHERE idProducto = @IdProducto";
                 SqlCommand cmdSeleccionar = new SqlCommand(sqlSeleccionar, conexion);
                 cmdSeleccionar.Parameters.AddWithValue("@IdProducto", idProducto);
-
-                // Ejecutar la consulta y obtener el resultado en un SqlDataReader
                 using (SqlDataReader reader = cmdSeleccionar.ExecuteReader())
                 {
-                    if (reader.Read()) // Si hay resultados, leer el primer registro
+                    if (reader.Read()) 
                     {
                         producto = new Producto
                         {
@@ -187,13 +170,10 @@ namespace DAL
                         };
                     }
                 }
-
-                // Se cierra la conexión
                 CerrarConexion();
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 CerrarConexion();
                 throw new Exception("Ocurrió un error al obtener el producto: " + ex.Message);
             }

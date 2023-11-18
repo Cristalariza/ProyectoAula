@@ -7,3 +7,6 @@ C:\Users\KARASU\source\repos\ProyectoTienda\DAL\obj\Debug\DAL.csproj.CoreCompile
 C:\Users\KARASU\source\repos\ProyectoTienda\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\KARASU\source\repos\ProyectoTienda\DAL\obj\Debug\DAL.dll
 C:\Users\KARASU\source\repos\ProyectoTienda\DAL\obj\Debug\DAL.pdb
+C:\Users\KARASU\source\repos\ProyectoTienda\DAL\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\DAL\bin\Debug\itextsharp.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\DAL\bin\Debug\itextsharp.xml

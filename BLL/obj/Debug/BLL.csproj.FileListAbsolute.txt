@@ -9,3 +9,6 @@ C:\Users\KARASU\source\repos\ProyectoTienda\BLL\obj\Debug\BLL.csproj.CoreCompile
 C:\Users\KARASU\source\repos\ProyectoTienda\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\KARASU\source\repos\ProyectoTienda\BLL\obj\Debug\BLL.dll
 C:\Users\KARASU\source\repos\ProyectoTienda\BLL\obj\Debug\BLL.pdb
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\bin\Debug\itextsharp.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\bin\Debug\itextsharp.xml

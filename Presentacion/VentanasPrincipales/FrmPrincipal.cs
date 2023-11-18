@@ -130,5 +130,10 @@ namespace Presentacion.VentanasPrincipales
         {
 
         }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
