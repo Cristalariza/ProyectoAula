@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,13 +18,22 @@ namespace Presentacion.VentanasPrincipales
         private Button currentButton;
         private Random random;
         private int tempIndex;
-        private Form activeForm; 
+        private Form activeForm;
+        public static Usuario _usuario;
 
         //constructor
-        public FrmPrincipal()
+        public FrmPrincipal(Usuario usuario)
         {
             InitializeComponent();
             random = new Random();
+            _usuario = usuario;
+            if (_usuario.Rol != "ADMIN")
+            {
+                btnProductos.Visible = false;
+                btnInforme.Visible = false;
+                btnEmpleados.Visible = false;
+                btnConfiguracion.Visible = false;
+            }
         }
         //metodos
         private Color SelectThemeColor()
@@ -133,7 +143,7 @@ namespace Presentacion.VentanasPrincipales
 
         private void BtnSalir_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
     }
 }

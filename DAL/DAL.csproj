@@ -52,6 +52,7 @@
     <Compile Include="FacturaRepository.cs" />
     <Compile Include="ProductoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entity\Entity.csproj">

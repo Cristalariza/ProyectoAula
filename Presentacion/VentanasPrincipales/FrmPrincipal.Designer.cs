@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.BtnSalir = new System.Windows.Forms.Button();
             this.btnConfiguracion = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDesktopPanel = new System.Windows.Forms.Panel();
-            this.BtnSalir = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -64,6 +64,25 @@
             this.panelMenu.TabIndex = 0;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // BtnSalir
+            // 
+            this.BtnSalir.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BtnSalir.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnSalir.FlatAppearance.BorderSize = 0;
+            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSalir.Location = new System.Drawing.Point(0, 434);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.BtnSalir.Size = new System.Drawing.Size(250, 60);
+            this.BtnSalir.TabIndex = 7;
+            this.BtnSalir.Text = "Salir";
+            this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            // 
             // btnConfiguracion
             // 
             this.btnConfiguracion.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -78,7 +97,7 @@
             this.btnConfiguracion.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnConfiguracion.Size = new System.Drawing.Size(250, 60);
             this.btnConfiguracion.TabIndex = 6;
-            this.btnConfiguracion.Text = "CONFIGURACIÓN";
+            this.btnConfiguracion.Text = "FACTURAS";
             this.btnConfiguracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfiguracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnConfiguracion.UseVisualStyleBackColor = false;
@@ -98,7 +117,7 @@
             this.btnEmpleados.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnEmpleados.Size = new System.Drawing.Size(250, 60);
             this.btnEmpleados.TabIndex = 5;
-            this.btnEmpleados.Text = "  EMPLEADOS";
+            this.btnEmpleados.Text = "  USUARIOS";
             this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEmpleados.UseVisualStyleBackColor = false;
@@ -142,6 +161,7 @@
             this.btnInforme.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInforme.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInforme.UseVisualStyleBackColor = false;
+            this.btnInforme.Visible = false;
             this.btnInforme.Click += new System.EventHandler(this.btnInforme_Click);
             // 
             // btnfacturacion
@@ -239,25 +259,6 @@
             this.panelDesktopPanel.Size = new System.Drawing.Size(820, 449);
             this.panelDesktopPanel.TabIndex = 2;
             this.panelDesktopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPanel_Paint);
-            // 
-            // BtnSalir
-            // 
-            this.BtnSalir.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.BtnSalir.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnSalir.FlatAppearance.BorderSize = 0;
-            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSalir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalir.Location = new System.Drawing.Point(0, 434);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.BtnSalir.Size = new System.Drawing.Size(250, 60);
-            this.BtnSalir.TabIndex = 7;
-            this.BtnSalir.Text = "Salir";
-            this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnSalir.UseVisualStyleBackColor = false;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // FrmPrincipal
             // 

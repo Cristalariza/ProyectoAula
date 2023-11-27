@@ -16,5 +16,18 @@ namespace BLL
         {
             return _repository.InsertarFactura(factura, detallesFactura);
         }
+
+        // Método para obtener facturas por ID de cliente
+        public List<Factura> ObtenerFacturasPorCliente(string idCliente)
+        {
+            return _repository.ObtenerFacturasPorCliente(idCliente);
+        }
+
+        // Método para obtener detalles de factura por ID de factura
+        public List<DetalleFactura> ObtenerDetallesPorFactura(int idFactura)
+        {
+            return _repository.ObtenerDetallesPorFactura(idFactura);
+        }
     }
 }
+

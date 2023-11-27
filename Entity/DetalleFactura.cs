@@ -11,6 +11,11 @@
         {
             return Producto.Precio * Cantidad;
         }
+
+        public string NombreProducto => Producto?.Nombre;
+
+        // Propiedad para exponer el precio del producto
+        public decimal PrecioProducto => Producto?.Precio ?? 0;
     }
 
 }

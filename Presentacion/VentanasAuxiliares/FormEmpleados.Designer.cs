@@ -28,40 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.TxtCantidad = new System.Windows.Forms.TextBox();
+            this.BtnEliminar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.TxtPrecio = new System.Windows.Forms.TextBox();
-            this.TxtNombreProd = new System.Windows.Forms.TextBox();
+            this.tablaUsuarios = new System.Windows.Forms.DataGridView();
+            this.TxtPassword = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.TxtIdProd = new System.Windows.Forms.TextBox();
+            this.TxtIdentificacion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.BtnModificar = new System.Windows.Forms.Button();
+            this.ComboRol = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // BtnEliminar
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(469, 136);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 35);
-            this.button2.TabIndex = 68;
-            this.button2.Text = "ELIMINAR";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // TxtCantidad
-            // 
-            this.TxtCantidad.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCantidad.Location = new System.Drawing.Point(188, 149);
-            this.TxtCantidad.Name = "TxtCantidad";
-            this.TxtCantidad.Size = new System.Drawing.Size(168, 22);
-            this.TxtCantidad.TabIndex = 67;
+            this.BtnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEliminar.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminar.Location = new System.Drawing.Point(469, 136);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(117, 35);
+            this.BtnEliminar.TabIndex = 68;
+            this.BtnEliminar.Text = "ELIMINAR";
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // label6
             // 
@@ -73,34 +66,35 @@
             this.label6.TabIndex = 66;
             this.label6.Text = "ROL:";
             // 
-            // dataGridView1
+            // tablaUsuarios
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tablaUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 225);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(594, 178);
-            this.dataGridView1.TabIndex = 65;
+            this.tablaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaUsuarios.Location = new System.Drawing.Point(20, 225);
+            this.tablaUsuarios.Name = "tablaUsuarios";
+            this.tablaUsuarios.RowHeadersWidth = 51;
+            this.tablaUsuarios.RowTemplate.Height = 24;
+            this.tablaUsuarios.Size = new System.Drawing.Size(594, 178);
+            this.tablaUsuarios.TabIndex = 65;
+            this.tablaUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaUsuarios_CellClick);
             // 
-            // TxtPrecio
+            // TxtPassword
             // 
-            this.TxtPrecio.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPrecio.Location = new System.Drawing.Point(188, 112);
-            this.TxtPrecio.Name = "TxtPrecio";
-            this.TxtPrecio.Size = new System.Drawing.Size(168, 22);
-            this.TxtPrecio.TabIndex = 64;
+            this.TxtPassword.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPassword.Location = new System.Drawing.Point(188, 112);
+            this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.Size = new System.Drawing.Size(168, 22);
+            this.TxtPassword.TabIndex = 64;
             // 
-            // TxtNombreProd
+            // TxtNombre
             // 
-            this.TxtNombreProd.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombreProd.Location = new System.Drawing.Point(188, 79);
-            this.TxtNombreProd.Name = "TxtNombreProd";
-            this.TxtNombreProd.Size = new System.Drawing.Size(168, 22);
-            this.TxtNombreProd.TabIndex = 63;
+            this.TxtNombre.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombre.Location = new System.Drawing.Point(188, 79);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(168, 22);
+            this.TxtNombre.TabIndex = 63;
             // 
             // label3
             // 
@@ -122,13 +116,13 @@
             this.label2.TabIndex = 61;
             this.label2.Text = "NOMBRE EMPLEADO:";
             // 
-            // TxtIdProd
+            // TxtIdentificacion
             // 
-            this.TxtIdProd.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIdProd.Location = new System.Drawing.Point(188, 47);
-            this.TxtIdProd.Name = "TxtIdProd";
-            this.TxtIdProd.Size = new System.Drawing.Size(168, 22);
-            this.TxtIdProd.TabIndex = 60;
+            this.TxtIdentificacion.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIdentificacion.Location = new System.Drawing.Point(188, 47);
+            this.TxtIdentificacion.Name = "TxtIdentificacion";
+            this.TxtIdentificacion.Size = new System.Drawing.Size(168, 22);
+            this.TxtIdentificacion.TabIndex = 60;
             // 
             // label1
             // 
@@ -151,18 +145,32 @@
             this.BtnAgregar.TabIndex = 58;
             this.BtnAgregar.Text = "AGREGAR";
             this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // button1
+            // BtnModificar
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(469, 99);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 35);
-            this.button1.TabIndex = 57;
-            this.button1.Text = "MODIFICAR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnModificar.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnModificar.Location = new System.Drawing.Point(469, 99);
+            this.BtnModificar.Name = "BtnModificar";
+            this.BtnModificar.Size = new System.Drawing.Size(117, 35);
+            this.BtnModificar.TabIndex = 57;
+            this.BtnModificar.Text = "MODIFICAR";
+            this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
+            // 
+            // ComboRol
+            // 
+            this.ComboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboRol.FormattingEnabled = true;
+            this.ComboRol.Items.AddRange(new object[] {
+            "EMPLEADO",
+            "ADMIN"});
+            this.ComboRol.Location = new System.Drawing.Point(188, 152);
+            this.ComboRol.Name = "ComboRol";
+            this.ComboRol.Size = new System.Drawing.Size(168, 24);
+            this.ComboRol.TabIndex = 69;
             // 
             // FormEmpleados
             // 
@@ -170,21 +178,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(635, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.TxtCantidad);
+            this.Controls.Add(this.ComboRol);
+            this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.TxtPrecio);
-            this.Controls.Add(this.TxtNombreProd);
+            this.Controls.Add(this.tablaUsuarios);
+            this.Controls.Add(this.TxtPassword);
+            this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.TxtIdProd);
+            this.Controls.Add(this.TxtIdentificacion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnAgregar);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnModificar);
             this.Name = "FormEmpleados";
             this.Text = "Gestion de Empleados";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,17 +200,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox TxtCantidad;
+        private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox TxtPrecio;
-        private System.Windows.Forms.TextBox TxtNombreProd;
+        private System.Windows.Forms.DataGridView tablaUsuarios;
+        private System.Windows.Forms.TextBox TxtPassword;
+        private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TxtIdProd;
+        private System.Windows.Forms.TextBox TxtIdentificacion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnModificar;
+        private System.Windows.Forms.ComboBox ComboRol;
     }
 }

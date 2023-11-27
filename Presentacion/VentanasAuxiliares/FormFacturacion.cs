@@ -1,5 +1,6 @@
 ﻿using BLL;
 using Entity;
+using Presentacion.VentanasPrincipales;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -205,7 +206,7 @@ namespace Presentacion.VentanasAuxiliares
                 factura.Total = CalcularSubTotal();
                 factura.Fecha = DateTime.Now;
                 factura.IdCliente = cliente.IdCliente;
-                factura.IdEmpleado = "ADMIN";
+                factura.IdEmpleado = FrmPrincipal._usuario.IdUsuario ?? null;
                 var msg = facturaService.InsertarFactura(factura, detalleList);
 
                 MessageBox.Show(msg, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);

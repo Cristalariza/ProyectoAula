@@ -20,11 +20,11 @@ namespace Presentacion.VentanasAuxiliares
             InitializeComponent();
             _service = new ClienteService();
             BtnModificar.Enabled = false;
-            try
-            {
-                LlenarTablaClientes();
-            }catch
-            { }
+                try
+                {
+                    LlenarTablaClientes();
+                }catch
+                { }
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)

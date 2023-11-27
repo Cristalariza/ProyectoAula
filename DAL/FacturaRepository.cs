@@ -68,7 +68,7 @@ namespace DAL
                 CerrarConexion();
                 CrearPDFDeFactura(factura, detallesFactura);
                 return $"Factura con ID {idFactura} ha sido creada con éxito.";
-            }
+            }   
             catch (Exception ex)
             {
                 CerrarConexion();
@@ -78,14 +78,19 @@ namespace DAL
 
         public void CrearPDFDeFactura(Factura factura, List<DetalleFactura> detallesFactura)
         {
-            string path = $"factura_{factura.IdCliente}_{factura.Fecha}.pdf";
+            string dia = DateTime.Now.Day.ToString();
+            string mes = DateTime.Now.Month.ToString();
+            string anio = DateTime.Now.Year.ToString();
+            string hora = DateTime.Now.Hour.ToString();
+            string completo = $"_FAC{dia}_{mes}_{anio}_{hora}";
+            string path = $"factura_{factura.IdCliente}{completo}.pdf";
             Document document = new Document(PageSize.A4, 50, 50, 25, 25);
             PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(path, FileMode.Create));
             document.Open();
 
             // Añadir información de la factura con un formato más formal
             document.Add(new Paragraph("FACTURA", FontFactory.GetFont("Arial", 20, Font.BOLD)));
-            document.Add(new Paragraph("Número de Factura: " + factura.IdFactura));
+            document.Add(new Paragraph("Número de Factura: VISIBLE SOLO POR ADMINISTRACION"));
             document.Add(new Paragraph("Fecha de Emisión: " + factura.Fecha.ToString("dd/MM/yyyy")));
             document.Add(new Paragraph("ID Cliente: " + factura.IdCliente));
             document.Add(new Paragraph("\n"));
@@ -165,6 +170,128 @@ namespace DAL
             return producto;
         }
 
+        public List<Factura> ObtenerFacturasPorCliente(string idCliente)
+        {
+            List<Factura> facturas = new List<Factura>();
+
+            try
+            {
+                AbrirConexion();
+                string sqlSeleccionar = @"
+                    SELECT idFactura, idCliente, idEmpleado, fecha, total 
+                    FROM Factura 
+                    WHERE idCliente = @IdCliente";
+
+                SqlCommand cmdSeleccionar = new SqlCommand(sqlSeleccionar, conexion);
+                cmdSeleccionar.Parameters.AddWithValue("@IdCliente", idCliente);
+
+                using (SqlDataReader reader = cmdSeleccionar.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Factura factura = new Factura
+                        {
+                            IdFactura = Convert.ToInt32(reader["idFactura"]),
+                            IdCliente = Convert.ToString(reader["idCliente"]),
+                            IdEmpleado = reader["idEmpleado"] != DBNull.Value ? Convert.ToString(reader["idEmpleado"]) : null,
+                            Fecha = Convert.ToDateTime(reader["fecha"]),
+                            Total = Convert.ToDecimal(reader["total"])
+                        };
+                        facturas.Add(factura);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocurrió un error al obtener las facturas: " + ex.Message);
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+
+            return facturas;
+        }
+
+        public List<DetalleFactura> ObtenerDetallesPorFactura(int idFactura)
+        {
+            var listaProductos = ObtenerTodosLosProductos();
+            List<DetalleFactura> detalles = new List<DetalleFactura>();
+
+            try
+            {
+                AbrirConexion();
+                string sqlSeleccionar = @"
+                    SELECT idDetalle, idFactura, idProducto, cantidad 
+                    FROM DetallesDeFactura 
+                    WHERE idFactura = @IdFactura";
+
+                SqlCommand cmdSeleccionar = new SqlCommand(sqlSeleccionar, conexion);
+                cmdSeleccionar.Parameters.AddWithValue("@IdFactura", idFactura);
+
+                using (SqlDataReader reader = cmdSeleccionar.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        DetalleFactura detalle = new DetalleFactura
+                        {
+                            IdDetalle = Convert.ToInt32(reader["idDetalle"]),
+                            IdProducto = Convert.ToString(reader["idProducto"]),
+                            Cantidad = Convert.ToInt32(reader["cantidad"])
+                        };
+
+                        // Obtener la información del producto y asignarla al detalle
+                        detalle.Producto = listaProductos.Where(x => x.IdProducto == detalle.IdProducto).FirstOrDefault();
+
+                        detalles.Add(detalle);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocurrió un error al obtener los detalles de la factura: " + ex.Message);
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+
+            return detalles;
+        }
+
+        public List<Producto> ObtenerTodosLosProductos()
+        {
+            List<Producto> listaProductos = new List<Producto>();
+
+            try
+            {
+                AbrirConexion();
+                string sqlSeleccionar = "SELECT idProducto, nombre, precio, cantidadEnStock FROM Producto";
+                SqlCommand cmdSeleccionar = new SqlCommand(sqlSeleccionar, conexion);
+                using (SqlDataReader reader = cmdSeleccionar.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Producto producto = new Producto
+                        {
+                            IdProducto = Convert.ToString(reader["idProducto"]),
+                            Nombre = Convert.ToString(reader["nombre"]),
+                            Precio = Convert.ToDecimal(reader["precio"]),
+                            CantidadEnStock = Convert.ToInt32(reader["cantidadEnStock"])
+                        };
+                        listaProductos.Add(producto);
+                    }
+                }
+                CerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                CerrarConexion();
+                throw new Exception("Ocurrió un error al obtener los productos: " + ex.Message);
+            }
+
+            return listaProductos;
+        }
 
     }
 }
