@@ -6,5 +6,7 @@
         public string NombreUsuario { get; set; }
         public string Contra { get; set; }
         public string Rol { get; set; }
+
+        public decimal VentasTotales { get; set; }
     }
 }

@@ -111,6 +111,12 @@
     <Compile Include="VentanasAuxiliares\FrmLoading.Designer.cs">
       <DependentUpon>FrmLoading.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanasAuxiliares\FrmProductosDisponibles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasAuxiliares\FrmProductosDisponibles.Designer.cs">
+      <DependentUpon>FrmProductosDisponibles.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanasPrincipales\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanasAuxiliares\FrmLoading.resx">
       <DependentUpon>FrmLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasAuxiliares\FrmProductosDisponibles.resx">
+      <DependentUpon>FrmProductosDisponibles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanasPrincipales\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -211,6 +220,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\configuracion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\informacion %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\agregar-archivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\tienda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\ordenador-personal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\licencia-de-conducir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\contrasena.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

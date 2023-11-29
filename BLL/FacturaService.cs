@@ -28,6 +28,30 @@ namespace BLL
         {
             return _repository.ObtenerDetallesPorFactura(idFactura);
         }
+
+        public List<Factura> ObtenerFacturasDesdeFecha(string fechaInicio)
+        {
+            return _repository.ObtenerFacturasDesdeFecha(fechaInicio);
+        }
+
+        public decimal ObtenerTotalGanancias()
+        {
+            return _repository.ObtenerTotalGanancias();
+        }
+
+        public Usuario ObtenerMayorVendedor()
+        {
+            return _repository.ObtenerEmpleadoMasVendedor();
+        }
+
+        public Producto ObtenerProductoMasVendido()
+        {
+            return _repository.ObtenerProductoMasVendido();
+        }
+        public Producto ObtenerProductoMenosVendido()
+        {
+            return _repository.ObtenerProductoMenosVendido();
+        }
     }
 }
 

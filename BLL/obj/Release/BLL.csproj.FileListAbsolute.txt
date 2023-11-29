@@ -1,0 +1,14 @@
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\bin\Release\BLL.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\bin\Release\BLL.pdb
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\bin\Release\DAL.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\bin\Release\Entity.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\bin\Release\itextsharp.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\bin\Release\BouncyCastle.Crypto.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\bin\Release\DAL.pdb
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\bin\Release\Entity.pdb
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\bin\Release\itextsharp.xml
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\obj\Release\BLL.csproj.AssemblyReference.cache
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\obj\Release\BLL.csproj.CoreCompileInputs.cache
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\obj\Release\BLL.csproj.CopyComplete
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\obj\Release\BLL.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\BLL\obj\Release\BLL.pdb

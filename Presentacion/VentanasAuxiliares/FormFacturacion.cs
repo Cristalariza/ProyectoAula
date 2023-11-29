@@ -2,6 +2,7 @@
 using Entity;
 using Presentacion.VentanasPrincipales;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -173,6 +174,8 @@ namespace Presentacion.VentanasAuxiliares
             if (string.IsNullOrWhiteSpace(TxtProdId.Text))
             {
                 MessageBox.Show("Llene la ID del producto.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                FrmProductosDisponibles frmProd = new FrmProductosDisponibles();
+                frmProd.ShowDialog();
                 return;
             }
 
@@ -186,7 +189,7 @@ namespace Presentacion.VentanasAuxiliares
                         producto.CantidadEnStock = prod.CantidadEnStock;
                     }
                 }
-
+                
                 LblNombreProd.Text = producto.Nombre;
                 LblPrecioProd.Text = producto.Precio.ToString();
                 LblCantProd.Text = producto.CantidadEnStock.ToString();

@@ -68,7 +68,7 @@ namespace DAL
                 CerrarConexion();
                 CrearPDFDeFactura(factura, detallesFactura);
                 return $"Factura con ID {idFactura} ha sido creada con éxito.";
-            }   
+            }
             catch (Exception ex)
             {
                 CerrarConexion();
@@ -293,5 +293,173 @@ namespace DAL
             return listaProductos;
         }
 
-    }
+        public decimal ObtenerTotalGanancias()
+        {
+            AbrirConexion();
+            try
+            {
+                string sql = "SELECT SUM(total) AS TotalGanancias FROM Factura;";
+                SqlCommand cmd = new SqlCommand(sql, conexion);
+                return (decimal)cmd.ExecuteScalar();
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+        }
+
+        public List<Factura> ObtenerFacturasDesdeFecha(string fechaInicio)
+        {
+            List<Factura> facturas = new List<Factura>();
+            AbrirConexion();
+            try
+            {
+                string sql = @"
+                SELECT idFactura, idCliente, idEmpleado, fecha, total 
+                FROM Factura 
+                WHERE fecha >= @FechaInicio;";
+
+                SqlCommand cmd = new SqlCommand(sql, conexion);
+                cmd.Parameters.AddWithValue("@FechaInicio", fechaInicio);
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var factura = new Factura
+                        {
+                            IdFactura = Convert.ToInt32(reader["idFactura"]),
+                            IdCliente = reader["idCliente"].ToString(),
+                            IdEmpleado = reader["idEmpleado"] != DBNull.Value ? reader["idEmpleado"].ToString() : null,
+                            Fecha = Convert.ToDateTime(reader["fecha"]),
+                            Total = Convert.ToDecimal(reader["total"])
+                        };
+                        facturas.Add(factura);
+                    }
+                }
+                return facturas;
+            }
+            catch (Exception ex)
+            {
+                // Maneja la excepción como prefieras
+                throw new Exception("Ocurrió un error al obtener las facturas: " + ex.Message);
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+        }
+
+        public Usuario ObtenerEmpleadoMasVendedor()
+        {
+            AbrirConexion();
+            try
+            {
+                string sql = @"
+                SELECT TOP 1 f.idEmpleado, e.Nombre, SUM(f.total) AS VentasTotales
+                FROM Factura f
+                JOIN Usuario e ON f.idEmpleado = e.idUsuario
+                GROUP BY f.idEmpleado, e.Nombre
+                ORDER BY VentasTotales DESC;";
+                SqlCommand cmd = new SqlCommand(sql, conexion);
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return new Usuario
+                        {
+                            IdUsuario = reader["idEmpleado"].ToString(),
+                            NombreUsuario = reader["Nombre"].ToString(),
+                            VentasTotales = (decimal)reader["VentasTotales"]
+                        };
+                    }
+                    return null;
+                }
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+        }
+
+        public Producto ObtenerProductoMasVendido()
+        {
+            Producto productoMasVendido = null;
+            AbrirConexion();
+            try
+            {
+                // Asegúrate de que los nombres de las columnas y las tablas coincidan con tu esquema de base de datos
+                string sql = @"
+                SELECT TOP 1 p.idProducto, p.nombre, SUM(df.cantidad) AS TotalVendido
+                FROM DetallesDeFactura df
+                INNER JOIN Producto p ON df.idProducto = p.idProducto
+                GROUP BY p.idProducto, p.nombre
+                ORDER BY TotalVendido DESC";
+
+                SqlCommand cmd = new SqlCommand(sql, conexion);
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        productoMasVendido = new Producto
+                        {
+                            IdProducto = reader["idProducto"].ToString(),
+                            Nombre = reader["nombre"].ToString(),
+                            CantidadVendida = Convert.ToInt32(reader["TotalVendido"]) // Asegúrate de que esta propiedad exista en tu clase Producto
+                        };
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Maneja la excepción como prefieras
+                throw new Exception("Ocurrió un error al obtener el producto más vendido: " + ex.Message);
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+            return productoMasVendido;
+        }
+
+        public Producto ObtenerProductoMenosVendido()
+        {
+            Producto productoMenosVendido = null;
+            AbrirConexion();
+            try
+            {
+                // Asegúrate de que los nombres de las columnas y las tablas coincidan con tu esquema de base de datos
+                string sql = @"
+                SELECT TOP 1 p.idProducto, p.nombre, ISNULL(SUM(df.cantidad), 0) AS TotalVendido
+                FROM Producto p
+                LEFT JOIN DetallesDeFactura df ON p.idProducto = df.idProducto
+                GROUP BY p.idProducto, p.nombre
+                ORDER BY TotalVendido ASC, p.idProducto ASC"; // Se añade p.idProducto para garantizar un orden consistente
+
+                SqlCommand cmd = new SqlCommand(sql, conexion);
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        productoMenosVendido = new Producto
+                        {
+                            IdProducto = reader["idProducto"].ToString(),
+                            Nombre = reader["nombre"].ToString(),
+                            CantidadVendida = Convert.ToInt32(reader["TotalVendido"]) // Asegúrate de que esta propiedad exista en tu clase Producto
+                        };
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Maneja la excepción como prefieras
+                throw new Exception("Ocurrió un error al obtener el producto menos vendido: " + ex.Message);
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+            return productoMenosVendido;
+        }
+    } 
 }

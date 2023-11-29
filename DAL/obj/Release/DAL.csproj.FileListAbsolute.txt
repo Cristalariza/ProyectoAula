@@ -1,0 +1,12 @@
+C:\Users\KARASU\source\repos\ProyectoTienda\DAL\bin\Release\DAL.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\DAL\bin\Release\DAL.pdb
+C:\Users\KARASU\source\repos\ProyectoTienda\DAL\bin\Release\BouncyCastle.Crypto.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\DAL\bin\Release\Entity.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\DAL\bin\Release\itextsharp.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\DAL\bin\Release\Entity.pdb
+C:\Users\KARASU\source\repos\ProyectoTienda\DAL\bin\Release\itextsharp.xml
+C:\Users\KARASU\source\repos\ProyectoTienda\DAL\obj\Release\DAL.csproj.AssemblyReference.cache
+C:\Users\KARASU\source\repos\ProyectoTienda\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+C:\Users\KARASU\source\repos\ProyectoTienda\DAL\obj\Release\DAL.csproj.CopyComplete
+C:\Users\KARASU\source\repos\ProyectoTienda\DAL\obj\Release\DAL.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\DAL\obj\Release\DAL.pdb

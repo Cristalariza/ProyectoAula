@@ -1,0 +1,6 @@
+C:\Users\KARASU\source\repos\ProyectoTienda\Entity\bin\Release\Entity.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\Entity\bin\Release\Entity.pdb
+C:\Users\KARASU\source\repos\ProyectoTienda\Entity\obj\Release\Entity.csproj.AssemblyReference.cache
+C:\Users\KARASU\source\repos\ProyectoTienda\Entity\obj\Release\Entity.csproj.CoreCompileInputs.cache
+C:\Users\KARASU\source\repos\ProyectoTienda\Entity\obj\Release\Entity.dll
+C:\Users\KARASU\source\repos\ProyectoTienda\Entity\obj\Release\Entity.pdb
